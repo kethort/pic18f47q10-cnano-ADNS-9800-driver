@@ -4,7 +4,7 @@ ADNS-9800 driver for the PIC18F47Q10 CNANO dev board
 Prints the X/Y delta location of the sensor to UART
 
 <p align="center">
-  <img src="/img/STDIO.PNG" width="500"/>
+  <img src="/img/STDIO.PNG" height="500" width="500"/>
 </p>
 
 This driver is a stripped-down sensor-only version of the repo located here:
