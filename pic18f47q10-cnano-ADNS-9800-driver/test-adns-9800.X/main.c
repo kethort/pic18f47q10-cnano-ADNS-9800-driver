@@ -35,23 +35,6 @@
 //=============================================================================
 bool g_bAdnsEnabled = false;
 
-static void UART_puts(const char *text) {
-    const char *char_ptr;
-    char_ptr = text;
-    
-    while(*char_ptr != '\0')
-    {
-        uart[UART0].Write(*char_ptr);
-        char_ptr++;
-    }
-}
-
-static void UART_putb(uint8_t txdata) {
-    static const char aHex[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-    uart[UART0].Write(aHex[txdata >> 4]);
-    uart[UART0].Write(aHex[txdata & 0x0f]);
-}
-
 static inline void ADNS_init(void) {
     ADNS_com_end();
     ADNS_com_begin();
