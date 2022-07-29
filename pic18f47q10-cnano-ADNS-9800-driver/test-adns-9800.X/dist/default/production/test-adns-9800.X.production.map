@@ -5,10 +5,10 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\test-adns-9800.X.production.sym \
   --cmf=dist/default/production\test-adns-9800.X.production.cmf -z \
-  -Q18F47Q10 -oC:\Users\User\AppData\Local\Temp\xcAsi68.4 \
+  -Q18F47Q10 -oC:\Users\User\AppData\Local\Temp\xcAs8rk.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/test-adns-9800.X.production.map \
-  --md=C:\Users\User\AppData\Local\Temp\xcAsi68.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\User\AppData\Local\Temp\xcAs8rk.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-01FFFFh -ACONST=00h-01FFFFh \
   -ASMALLCONST=0F00h-0FFFhx497 -AMEDIUMCONST=0F00h-0FFFFh,010F00h-01FFFFh \
   -ACOMRAM=01h-05Fh -AABS1=00h-0CFFh,0E00h-0E1Eh \
@@ -28,7 +28,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\User\AppData\Local\Temp\xcAsi68.o \
+  C:\Users\User\AppData\Local\Temp\xcAs8rk.o \
   dist/default/production\test-adns-9800.X.production.o 
 
 Object code version is 3.11
@@ -38,7 +38,7 @@ Machine type is 18F47Q10
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\User\AppData\Local\Temp\xcAsi68.o
+C:\Users\User\AppData\Local\Temp\xcAs8rk.o
                 idloc                            200000   200000      100        0       5
                 config                           300000   300000        C        0       4
                 init                                 DA       DA        4        4       0
@@ -48,7 +48,7 @@ dist/default/production\test-adns-9800.X.production.o
                 idloc                            200000   200000      100        0       5
                 config                           300000   300000        C        0       4
                 temp                                 5B       5B        1        1       1
-                mediumconst                        F2C4     F2C4      D3C     7962       0
+                mediumconst                        F2D4     F2D4      D2C     796A       0
                 text55                            11956    11956       2C     8000       0
                 text54                            11AEE    11AEE        6     8D77       0
                 text53                            11B08    11B08        2     8D77       0
@@ -181,7 +181,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   SMALLCONST     
 
         CLASS   MEDIUMCONST    
-                mediumconst                        F2C4     F2C4      D3C         0
+                mediumconst                        F2D4     F2D4      D2C         0
 
         CLASS   COMRAM         
                 temp                                 5B       5B        1         1
@@ -252,7 +252,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMRAM                   000001  00005B  00005C         1       1  COMRAM  
                 intcode                        000008  0000D6  0000DE         4       0  CODE    
                 bssBANK0                       000060  00008A  0000EA        60       1  BANK0   
-                mediumconst                    00F2C4  000D3C  010000      7962       0  MEDIUMCO
+                mediumconst                    00F2D4  000D2C  010000      796A       0  MEDIUMCO
                 text23                         010000  001AED  011AED      8000       0  CODE    
                 text54                         011AEE  00001C  011B0A      8D77       0  CODE    
 
@@ -280,23 +280,23 @@ UNUSED ADDRESS RANGES
         BIGSFR           000D00-000DFF              100
                          000E1F-000FFF              1E1
         CODE             000004-000007                4
-                         0000DE-00F2C3             F1E6
+                         0000DE-00F2D3             F1F6
                          011AED-011AED                1
                          011B0A-01FFFF             E4F6
         COMRAM           00005C-00005F                4
         CONST            000004-000007                4
-                         0000DE-00F2C3             F1E6
+                         0000DE-00F2D3             F1F6
                          011AED-011AED                1
                          011B0A-01FFFF             E4F6
         EEDATA           310000-3103FF              400
-        MEDIUMCONST      000F00-00F2C3             E3C4
+        MEDIUMCONST      000F00-00F2D3             E3D4
                          011AED-011AED                1
                          011B0A-01FFFF             E4F6
         RAM              0000EA-000CFF              100
                          000E00-000E1E               1F
         SFR              000D00-000DFF              100
                          000E1F-000FFF               E1
-        SMALLCONST       000F00-00F2C3              100
+        SMALLCONST       000F00-00F2D3              100
                          011AED-011AED                1
                          011B0A-01FFFF              100
 
@@ -342,13 +342,12 @@ SPI_bitBangData@u8DataToSendP                   cstackCOMRAM 000006
 SPI_bitBangData@u8ReceivedData                  cstackCOMRAM 000007
 SPI_transfer@u8DataP                            cstackCOMRAM 000009
 SPI_transfer@u8ReceivedData                     cstackCOMRAM 00000A
-UART_putb@aHex                                  mediumconst  00FEE1
 _ADNS_com_begin                                 text45       011B04
-_ADNS_com_begin@adns9800$F1000                  text18       011AFC
+_ADNS_com_begin@adns9800$F962                   text18       011AFC
 _ADNS_com_end                                   text44       011B00
-_ADNS_com_end@adns9800$F1002                    text17       011AF8
+_ADNS_com_end@adns9800$F964                     text17       011AF8
 _ADNS_dispRegisters                             text19       01146A
-_ADNS_firmware_data                             mediumconst  00F2C5
+_ADNS_firmware_data                             mediumconst  00F2D5
 _ADNS_init                                      text14       010C50
 _ADNS_read_reg                                  text41       0119AC
 _ADNS_uart_print_register                       text20       01192A
@@ -638,7 +637,7 @@ __Lintentry                                     intentry     000000
 __Lintret                                       intret       000000
 __Lintsave_regs                                 intsave_regs 000000
 __Lirdata                                       irdata       000000
-__Lmediumconst                                  mediumconst  00F2C4
+__Lmediumconst                                  mediumconst  00F2D4
 __LnvBANK0                                      nvBANK0      000000
 __LnvFARRAM                                     nvFARRAM     000000
 __Lnvbit                                        nvbit        000000
@@ -742,13 +741,12 @@ ___rparam_used                                  (abs)        000001
 ___sp                                           stack        000000
 __accesstop                                     (abs)        000060
 __activetblptr                                  (abs)        000003
-__end_ofUART_putb@aHex                          mediumconst  00FEF1
 __end_of_ADNS_com_begin                         text45       011B08
-__end_of_ADNS_com_begin@adns9800$F1000          text18       011B00
+__end_of_ADNS_com_begin@adns9800$F962           text18       011B00
 __end_of_ADNS_com_end                           text44       011B04
-__end_of_ADNS_com_end@adns9800$F1002            text17       011AFC
+__end_of_ADNS_com_end@adns9800$F964             text17       011AFC
 __end_of_ADNS_dispRegisters                     text19       0114FC
-__end_of_ADNS_firmware_data                     mediumconst  00FEC3
+__end_of_ADNS_firmware_data                     mediumconst  00FED3
 __end_of_ADNS_init                              text14       010DC2
 __end_of_ADNS_read_reg                          text41       0119D6
 __end_of_ADNS_uart_print_register               text20       011956
@@ -798,12 +796,12 @@ __end_of_stoa                                   text30       010AC8
 __end_of_strlen                                 text33       0116FA
 __end_of_strncmp                                text29       011122
 __end_of_toupper                                text25       011786
-__end_of_uart                                   mediumconst  00FEE1
+__end_of_uart                                   mediumconst  00FEF1
 __end_of_vfpfcnvrt                              text23       0103B0
 __end_of_vfprintf                               text22       0115E6
 __end_of_xtoa                                   text24       01092E
 __initialization                                cinit        01180A
-__mediumconst                                   mediumconst  00F2C4
+__mediumconst                                   mediumconst  00F2D4
 __pbssBANK0                                     bssBANK0     000060
 __pbssCOMRAM                                    bssCOMRAM    000057
 __pcinit                                        cinit        01180A
@@ -812,7 +810,7 @@ __pcstackCOMRAM                                 cstackCOMRAM 000001
 __pdataBANK0                                    dataBANK0    0000E3
 __pidataBANK0                                   idataBANK0   011AE6
 __pintcode                                      intcode      000008
-__pmediumconst                                  mediumconst  00F2C4
+__pmediumconst                                  mediumconst  00F2D4
 __pnvBANK0                                      nvBANK0      0000D0
 __ptext0                                        text0        010F26
 __ptext1                                        text1        011A32
@@ -875,7 +873,7 @@ __smallconst                                    smallconst   000000
 _abs                                            text38       0117CA
 _dbuf                                           bssBANK0     000088
 _dtoa                                           text31       0103B0
-_dtoa$1594                                      cstackCOMRAM 000034
+_dtoa$1550                                      cstackCOMRAM 000034
 _eusart2RxBuffer                                bssBANK0     000068
 _eusart2RxCount                                 bssBANK0     000084
 _eusart2RxHead                                  bssCOMRAM    00005A
@@ -904,9 +902,9 @@ _stoa                                           text30       01092E
 _strlen                                         text33       0116AA
 _strncmp                                        text29       01102C
 _toupper                                        text25       011742
-_uart                                           mediumconst  00FEC3
+_uart                                           mediumconst  00FED3
 _vfpfcnvrt                                      text23       010000
-_vfpfcnvrt$1632                                 cstackBANK0  0000BB
+_vfpfcnvrt$1588                                 cstackBANK0  0000BB
 _vfprintf                                       text22       011580
 _width                                          bssBANK0     00007A
 _xtoa                                           text24       01068E
@@ -1104,12 +1102,11 @@ C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c estimated size: 3056
 
 shared
-		_uart          		MEDIUMCONST    	FEC3	0000	30
+		_uart          		MEDIUMCONST    	FED3	0000	30
 		__initialization		CODE           	1180A	0000	52
-		UART_putb@aHex 		MEDIUMCONST    	FEE1	0000	16
-		_ADNS_firmware_data		MEDIUMCONST    	F2C5	0000	3070
+		_ADNS_firmware_data		MEDIUMCONST    	F2D5	0000	3070
 
-shared estimated size: 3168
+shared estimated size: 3152
 
 mcc_generated_files/mcc.c
 		_PMD_Initialize		CODE           	119FE	0000	28
@@ -1124,10 +1121,10 @@ C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\abs.c
 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\abs.c estimated size: 64
 
 ./adns9800.h
-		_ADNS_com_end@adns9800$F1002		CODE           	11AF8	0000	4
+		_ADNS_com_end@adns9800$F964		CODE           	11AF8	0000	4
 		_ADNS_com_end  		CODE           	11B00	0000	4
 		_ADNS_com_begin		CODE           	11B04	0000	4
-		_ADNS_com_begin@adns9800$F1000		CODE           	11AFC	0000	4
+		_ADNS_com_begin@adns9800$F962		CODE           	11AFC	0000	4
 
 ./adns9800.h estimated size: 16
 

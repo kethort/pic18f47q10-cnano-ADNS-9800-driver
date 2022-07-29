@@ -10,29 +10,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27564
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-Q_DFP/1.13.211/xc8\pic\include\proc\pic18f47q10.h: 27564: extern volatile LATBbits_t LATBbits __attribute__((address(0xF83)));
 [v _LATBbits `VS1201 ~T0 @X0 0 e@3971 ]
-[v F13238 `(uc ~T0 @X0 0 tf ]
-[v F13240 `(v ~T0 @X0 0 tf1`uc ]
-[v F13243 `(a ~T0 @X0 0 tf ]
-[v F13245 `(a ~T0 @X0 0 tf ]
-[v F13248 `(v ~T0 @X0 0 tf ]
-[v F13247 `(v ~T0 @X0 0 tf1`*F13248 ]
-[v F13251 `(v ~T0 @X0 0 tf ]
-[v F13254 `(v ~T0 @X0 0 tf ]
-[v F13253 `(v ~T0 @X0 0 tf1`*F13254 ]
-[v F13257 `(a ~T0 @X0 0 tf ]
-[v F13259 `(v ~T0 @X0 0 tf ]
-[v F13261 `(v ~T0 @X0 0 tf ]
-"37 ./mcc_generated_files/drivers/uart.h
-[; ;./mcc_generated_files/drivers/uart.h: 37: typedef struct {
-[s S1739 `*F13238 1 `*F13240 1 `*F13243 1 `*F13245 1 `*F13247 1 `*F13251 1 `*F13253 1 `*F13257 1 `*F13259 1 `*F13261 1 ]
-[n S1739 . Read Write TransmitReady DataReady SetTxISR RxDefaultISR SetRxISR TransmitDone TxDefaultISR Initialize ]
-"49
-[; ;./mcc_generated_files/drivers/uart.h: 49: extern const uart_functions_t uart[];
-[v _uart `CS1739 ~T0 @X0 -> 0 `x e ]
-"44 main.c
-[; ;main.c: 44:         uart[UART0].Write(*char_ptr);
-[c E13233 0 .. ]
-[n E13233 . UART0  ]
 "113 ./adns9800.h
 [; ;./adns9800.h: 113: void ADNS_write_reg(uint8_t u8RegAddrP, uint8_t u8DataP);
 [v _ADNS_write_reg `(v ~T0 @X0 0 ef2`uc`uc ]
@@ -1815,405 +1792,327 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _g_bAdnsEnabled
 -> -> 0 `i `a
 ]
+[v F13287 `(v ~T0 @X0 1 tf ]
 "38
-[; ;main.c: 38: static void UART_puts(const char *text) {
-[v _UART_puts `(v ~T0 @X0 1 sf1`*Cuc ]
-{
-[e :U _UART_puts ]
-[v _text `*Cuc ~T0 @X0 1 r1 ]
-[f ]
-"39
-[; ;main.c: 39:     const char *char_ptr;
-[v _char_ptr `*Cuc ~T0 @X0 1 a ]
-"40
-[; ;main.c: 40:     char_ptr = text;
-[e = _char_ptr _text ]
-"42
-[; ;main.c: 42:     while(*char_ptr != '\0')
-[e $U 1744  ]
-[e :U 1745 ]
-"43
-[; ;main.c: 43:     {
-{
-"44
-[; ;main.c: 44:         uart[UART0].Write(*char_ptr);
-[e ( *U . *U + &U _uart * -> . `E13233 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> *U _char_ptr `uc ]
-"45
-[; ;main.c: 45:         char_ptr++;
-[e ++ _char_ptr * -> -> 1 `i `x -> -> # *U _char_ptr `i `x ]
-"46
-[; ;main.c: 46:     }
-}
-[e :U 1744 ]
-"42
-[; ;main.c: 42:     while(*char_ptr != '\0')
-[e $ != -> *U _char_ptr `ui -> 0 `ui 1745  ]
-[e :U 1746 ]
-"47
-[; ;main.c: 47: }
-[e :UE 1743 ]
-}
-"49
-[; ;main.c: 49: static void UART_putb(uint8_t txdata) {
-[v _UART_putb `(v ~T0 @X0 1 sf1`uc ]
-{
-[e :U _UART_putb ]
-[v _txdata `uc ~T0 @X0 1 r1 ]
-[f ]
-"50
-[; ;main.c: 50:     static const char aHex[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-[v F13294 `Cuc ~T0 @X0 -> 16 `i s aHex ]
-[i F13294
-:U ..
--> -> 48 `ui `uc
--> -> 49 `ui `uc
--> -> 50 `ui `uc
--> -> 51 `ui `uc
--> -> 52 `ui `uc
--> -> 53 `ui `uc
--> -> 54 `ui `uc
--> -> 55 `ui `uc
--> -> 56 `ui `uc
--> -> 57 `ui `uc
--> -> 65 `ui `uc
--> -> 66 `ui `uc
--> -> 67 `ui `uc
--> -> 68 `ui `uc
--> -> 69 `ui `uc
--> -> 70 `ui `uc
-..
-]
-"51
-[; ;main.c: 51:     uart[UART0].Write(aHex[txdata >> 4]);
-[e ( *U . *U + &U _uart * -> . `E13233 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> *U + &U F13294 * -> -> >> -> _txdata `i -> 4 `i `ui `ux -> -> # *U &U F13294 `ui `ux `uc ]
-"52
-[; ;main.c: 52:     uart[UART0].Write(aHex[txdata & 0x0f]);
-[e ( *U . *U + &U _uart * -> . `E13233 0 `ux -> -> # *U &U _uart `ui `ux 1 (1 -> *U + &U F13294 * -> -> & -> _txdata `i -> 15 `i `ui `ux -> -> # *U &U F13294 `ui `ux `uc ]
-"53
-[; ;main.c: 53: }
-[e :UE 1747 ]
-}
-[v F13302 `(v ~T0 @X0 1 tf ]
-"55
-[; ;main.c: 55: static __attribute__((inline)) void ADNS_init(void) {
-[v _ADNS_init `TF13302 ~T0 @X0 1 s ]
+[; ;main.c: 38: static __attribute__((inline)) void ADNS_init(void) {
+[v _ADNS_init `TF13287 ~T0 @X0 1 s ]
 {
 [e :U _ADNS_init ]
 [f ]
-"56
-[; ;main.c: 56:     ADNS_com_end();
+"39
+[; ;main.c: 39:     ADNS_com_end();
 [e ( _ADNS_com_end ..  ]
-"57
-[; ;main.c: 57:     ADNS_com_begin();
+"40
+[; ;main.c: 40:     ADNS_com_begin();
 [e ( _ADNS_com_begin ..  ]
-"58
-[; ;main.c: 58:     ADNS_com_end();
+"41
+[; ;main.c: 41:     ADNS_com_end();
 [e ( _ADNS_com_end ..  ]
-"59
-[; ;main.c: 59:     ADNS_write_reg(0x3a, 0x5a);
+"42
+[; ;main.c: 42:     ADNS_write_reg(0x3a, 0x5a);
 [e ( _ADNS_write_reg (2 , -> -> 58 `i `uc -> -> 90 `i `uc ]
-"60
-[; ;main.c: 60:     _delay((unsigned long)((50)*(4000000/4000.0)));
+"43
+[; ;main.c: 43:     _delay((unsigned long)((50)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"63
-[; ;main.c: 63:     (void)ADNS_read_reg(0x02);
+"46
+[; ;main.c: 46:     (void)ADNS_read_reg(0x02);
 [e ( _ADNS_read_reg (1 -> -> 2 `i `uc ]
-"64
-[; ;main.c: 64:     (void)ADNS_read_reg(0x03);
+"47
+[; ;main.c: 47:     (void)ADNS_read_reg(0x03);
 [e ( _ADNS_read_reg (1 -> -> 3 `i `uc ]
-"65
-[; ;main.c: 65:     (void)ADNS_read_reg(0x04);
+"48
+[; ;main.c: 48:     (void)ADNS_read_reg(0x04);
 [e ( _ADNS_read_reg (1 -> -> 4 `i `uc ]
-"66
-[; ;main.c: 66:     (void)ADNS_read_reg(0x05);
+"49
+[; ;main.c: 49:     (void)ADNS_read_reg(0x05);
 [e ( _ADNS_read_reg (1 -> -> 5 `i `uc ]
-"67
-[; ;main.c: 67:     (void)ADNS_read_reg(0x06);
+"50
+[; ;main.c: 50:     (void)ADNS_read_reg(0x06);
 [e ( _ADNS_read_reg (1 -> -> 6 `i `uc ]
-"70
-[; ;main.c: 70:     printf("ADNS9800 Uploading firmware...\n");
+"53
+[; ;main.c: 53:     printf("ADNS9800 Uploading firmware...\n");
 [e ( _printf :s 1C ]
-"71
-[; ;main.c: 71:     ADNS_upload_firmware();
+"54
+[; ;main.c: 54:     ADNS_upload_firmware();
 [e ( _ADNS_upload_firmware ..  ]
-"72
-[; ;main.c: 72:     _delay((unsigned long)((10)*(4000000/4000.0)));
+"55
+[; ;main.c: 55:     _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"75
-[; ;main.c: 75:     uint8_t u8ProductId = ADNS_read_reg(0x00);
+"58
+[; ;main.c: 58:     uint8_t u8ProductId = ADNS_read_reg(0x00);
 [v _u8ProductId `uc ~T0 @X0 1 a ]
 [e = _u8ProductId ( _ADNS_read_reg (1 -> -> 0 `i `uc ]
-"77
-[; ;main.c: 77:     if (0x33 == u8ProductId) {
-[e $ ! == -> 51 `i -> _u8ProductId `i 1749  ]
+"60
+[; ;main.c: 60:     if (0x33 == u8ProductId) {
+[e $ ! == -> 51 `i -> _u8ProductId `i 1744  ]
 {
-"79
-[; ;main.c: 79:         if (0xff == (ADNS_read_reg(0x3f) ^ u8ProductId)) {
-[e $ ! == -> 255 `i ^ -> ( _ADNS_read_reg (1 -> -> 63 `i `uc `i -> _u8ProductId `i 1750  ]
+"62
+[; ;main.c: 62:         if (0xff == (ADNS_read_reg(0x3f) ^ u8ProductId)) {
+[e $ ! == -> 255 `i ^ -> ( _ADNS_read_reg (1 -> -> 63 `i `uc `i -> _u8ProductId `i 1745  ]
 {
-"81
-[; ;main.c: 81:             ADNS_write_reg(0x13, 0x15);
+"64
+[; ;main.c: 64:             ADNS_write_reg(0x13, 0x15);
 [e ( _ADNS_write_reg (2 , -> -> 19 `i `uc -> -> 21 `i `uc ]
-"82
-[; ;main.c: 82:             _delay((unsigned long)((10)*(4000000/4000.0)));
+"65
+[; ;main.c: 65:             _delay((unsigned long)((10)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"84
-[; ;main.c: 84:             uint8_t u8CrcLow = ADNS_read_reg(0x25);
+"67
+[; ;main.c: 67:             uint8_t u8CrcLow = ADNS_read_reg(0x25);
 [v _u8CrcLow `uc ~T0 @X0 1 a ]
 [e = _u8CrcLow ( _ADNS_read_reg (1 -> -> 37 `i `uc ]
-"85
-[; ;main.c: 85:             uint8_t u8CrcHigh = ADNS_read_reg(0x26);
+"68
+[; ;main.c: 68:             uint8_t u8CrcHigh = ADNS_read_reg(0x26);
 [v _u8CrcHigh `uc ~T0 @X0 1 a ]
 [e = _u8CrcHigh ( _ADNS_read_reg (1 -> -> 38 `i `uc ]
-"87
-[; ;main.c: 87:             if ((0xEF == u8CrcLow) && (0xBE == u8CrcHigh)) {
-[e $ ! && == -> 239 `i -> _u8CrcLow `i == -> 190 `i -> _u8CrcHigh `i 1751  ]
+"70
+[; ;main.c: 70:             if ((0xEF == u8CrcLow) && (0xBE == u8CrcHigh)) {
+[e $ ! && == -> 239 `i -> _u8CrcLow `i == -> 190 `i -> _u8CrcHigh `i 1746  ]
 {
-"88
-[; ;main.c: 88:                 g_bAdnsEnabled = 1;
+"71
+[; ;main.c: 71:                 g_bAdnsEnabled = 1;
 [e = _g_bAdnsEnabled -> -> 1 `i `a ]
-"93
-[; ;main.c: 93:                 uint8_t u8LaserDriveMode = ADNS_read_reg(0x20);
+"76
+[; ;main.c: 76:                 uint8_t u8LaserDriveMode = ADNS_read_reg(0x20);
 [v _u8LaserDriveMode `uc ~T0 @X0 1 a ]
 [e = _u8LaserDriveMode ( _ADNS_read_reg (1 -> -> 32 `i `uc ]
-"94
-[; ;main.c: 94:                 ADNS_write_reg(0x20, u8LaserDriveMode & 0xf0 );
+"77
+[; ;main.c: 77:                 ADNS_write_reg(0x20, u8LaserDriveMode & 0xf0 );
 [e ( _ADNS_write_reg (2 , -> -> 32 `i `uc -> & -> _u8LaserDriveMode `i -> 240 `i `uc ]
-"95
-[; ;main.c: 95:                 _delay((unsigned long)((1)*(4000000/4000.0)));
+"78
+[; ;main.c: 78:                 _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"97
-[; ;main.c: 97:                 printf("Optical Chip Initialized\n");
+"80
+[; ;main.c: 80:                 printf("Optical Chip Initialized\n");
 [e ( _printf :s 2C ]
-"98
-[; ;main.c: 98:             }
+"81
+[; ;main.c: 81:             }
 }
-[e $U 1752  ]
-"99
-[; ;main.c: 99:             else {
-[e :U 1751 ]
+[e $U 1747  ]
+"82
+[; ;main.c: 82:             else {
+[e :U 1746 ]
 {
-"100
-[; ;main.c: 100:                 printf("SROM CRC error: 0x%X\n", ((u8CrcHigh << 8) | u8CrcLow));
+"83
+[; ;main.c: 83:                 printf("SROM CRC error: 0x%X\n", ((u8CrcHigh << 8) | u8CrcLow));
 [e ( _printf , (. :s 3C | << -> _u8CrcHigh `i -> 8 `i -> _u8CrcLow `i ]
-"101
-[; ;main.c: 101:             }
+"84
+[; ;main.c: 84:             }
 }
-[e :U 1752 ]
-"102
-[; ;main.c: 102:         }
+[e :U 1747 ]
+"85
+[; ;main.c: 85:         }
 }
-[e $U 1753  ]
-"103
-[; ;main.c: 103:         else {
-[e :U 1750 ]
+[e $U 1748  ]
+"86
+[; ;main.c: 86:         else {
+[e :U 1745 ]
 {
-"104
-[; ;main.c: 104:             printf("Product ID test failed\n");
+"87
+[; ;main.c: 87:             printf("Product ID test failed\n");
 [e ( _printf :s 4C ]
-"105
-[; ;main.c: 105:         }
+"88
+[; ;main.c: 88:         }
 }
-[e :U 1753 ]
-"106
-[; ;main.c: 106:     }
+[e :U 1748 ]
+"89
+[; ;main.c: 89:     }
 }
-[e $U 1754  ]
-"107
-[; ;main.c: 107:     else {
-[e :U 1749 ]
+[e $U 1749  ]
+"90
+[; ;main.c: 90:     else {
+[e :U 1744 ]
 {
-"108
-[; ;main.c: 108:         printf("Invalid Product ID: 0x%X\n", u8ProductId);
+"91
+[; ;main.c: 91:         printf("Invalid Product ID: 0x%X\n", u8ProductId);
 [e ( _printf , (. :s 5C -> _u8ProductId `i ]
-"109
-[; ;main.c: 109:     }
+"92
+[; ;main.c: 92:     }
 }
-[e :U 1754 ]
-"110
-[; ;main.c: 110: }
-[e :UE 1748 ]
+[e :U 1749 ]
+"93
+[; ;main.c: 93: }
+[e :UE 1743 ]
 }
-"112
-[; ;main.c: 112: void ADNS_uart_print_register(uint8_t u8RegIdP, char * szRegNameP) {
+"95
+[; ;main.c: 95: void ADNS_uart_print_register(uint8_t u8RegIdP, char * szRegNameP) {
 [v _ADNS_uart_print_register `(v ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _ADNS_uart_print_register ]
 [v _u8RegIdP `uc ~T0 @X0 1 r1 ]
 [v _szRegNameP `*uc ~T0 @X0 1 r2 ]
 [f ]
-"113
-[; ;main.c: 113:     uint8_t u8RegValue = ADNS_read_reg(u8RegIdP);
+"96
+[; ;main.c: 96:     uint8_t u8RegValue = ADNS_read_reg(u8RegIdP);
 [v _u8RegValue `uc ~T0 @X0 1 a ]
 [e = _u8RegValue ( _ADNS_read_reg (1 _u8RegIdP ]
-"114
-[; ;main.c: 114:     printf("%s : 0x%X\n", szRegNameP, u8RegValue);
+"97
+[; ;main.c: 97:     printf("%s : 0x%X\n", szRegNameP, u8RegValue);
 [e ( _printf , , (. :s 6C _szRegNameP -> _u8RegValue `i ]
-"115
-[; ;main.c: 115: }
-[e :UE 1755 ]
+"98
+[; ;main.c: 98: }
+[e :UE 1750 ]
 }
-[v F13312 `(v ~T0 @X0 1 tf ]
-"117
-[; ;main.c: 117: static __attribute__((inline)) void ADNS_dispRegisters(void) {
-[v _ADNS_dispRegisters `TF13312 ~T0 @X0 1 s ]
+[v F13297 `(v ~T0 @X0 1 tf ]
+"100
+[; ;main.c: 100: static __attribute__((inline)) void ADNS_dispRegisters(void) {
+[v _ADNS_dispRegisters `TF13297 ~T0 @X0 1 s ]
 {
 [e :U _ADNS_dispRegisters ]
 [f ]
-"118
-[; ;main.c: 118:     ADNS_uart_print_register(0x00, "Product ID");
+"101
+[; ;main.c: 101:     ADNS_uart_print_register(0x00, "Product ID");
 [e ( _ADNS_uart_print_register (2 , -> -> 0 `i `uc :s 7C ]
-"119
-[; ;main.c: 119:     ADNS_uart_print_register(0x01, "Revision ID");
+"102
+[; ;main.c: 102:     ADNS_uart_print_register(0x01, "Revision ID");
 [e ( _ADNS_uart_print_register (2 , -> -> 1 `i `uc :s 8C ]
-"120
-[; ;main.c: 120:     ADNS_uart_print_register(0x02, "Motion");
+"103
+[; ;main.c: 103:     ADNS_uart_print_register(0x02, "Motion");
 [e ( _ADNS_uart_print_register (2 , -> -> 2 `i `uc :s 9C ]
-"121
-[; ;main.c: 121:     ADNS_uart_print_register(0x24, "Observation");
+"104
+[; ;main.c: 104:     ADNS_uart_print_register(0x24, "Observation");
 [e ( _ADNS_uart_print_register (2 , -> -> 36 `i `uc :s 10C ]
-"122
-[; ;main.c: 122:     ADNS_uart_print_register(0x2a, "SROM ID");
+"105
+[; ;main.c: 105:     ADNS_uart_print_register(0x2a, "SROM ID");
 [e ( _ADNS_uart_print_register (2 , -> -> 42 `i `uc :s 11C ]
-"123
-[; ;main.c: 123:     ADNS_uart_print_register(0x0f, "Config I");
+"106
+[; ;main.c: 106:     ADNS_uart_print_register(0x0f, "Config I");
 [e ( _ADNS_uart_print_register (2 , -> -> 15 `i `uc :s 12C ]
-"124
-[; ;main.c: 124:     ADNS_uart_print_register(0x10, "Config II");
+"107
+[; ;main.c: 107:     ADNS_uart_print_register(0x10, "Config II");
 [e ( _ADNS_uart_print_register (2 , -> -> 16 `i `uc :s 13C ]
-"125
-[; ;main.c: 125:     ADNS_uart_print_register(0x39, "Config IV");
+"108
+[; ;main.c: 108:     ADNS_uart_print_register(0x39, "Config IV");
 [e ( _ADNS_uart_print_register (2 , -> -> 57 `i `uc :s 14C ]
-"126
-[; ;main.c: 126:     ADNS_uart_print_register(0x2f, "Config V");
+"109
+[; ;main.c: 109:     ADNS_uart_print_register(0x2f, "Config V");
 [e ( _ADNS_uart_print_register (2 , -> -> 47 `i `uc :s 15C ]
-"127
-[; ;main.c: 127: }
-[e :UE 1756 ]
+"110
+[; ;main.c: 110: }
+[e :UE 1751 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"129
-[; ;main.c: 129: void main(void) {
+"112
+[; ;main.c: 112: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"130
-[; ;main.c: 130:     SYSTEM_Initialize();
+"113
+[; ;main.c: 113:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"131
-[; ;main.c: 131:     (INTCONbits.GIE = 1);
+"114
+[; ;main.c: 114:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 1 2 -> -> 1 `i `uc ]
-"132
-[; ;main.c: 132:     (INTCONbits.PEIE = 1);
+"115
+[; ;main.c: 115:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 1 1 -> -> 1 `i `uc ]
-"134
-[; ;main.c: 134:     ANSELB = 0;
+"117
+[; ;main.c: 117:     ANSELB = 0;
 [e = _ANSELB -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:     ANSELD = 0;
+"118
+[; ;main.c: 118:     ANSELD = 0;
 [e = _ANSELD -> -> 0 `i `uc ]
-"137
-[; ;main.c: 137:     SPI_init();
+"120
+[; ;main.c: 120:     SPI_init();
 [e ( _SPI_init ..  ]
-"138
-[; ;main.c: 138:     ADNS_init();
+"121
+[; ;main.c: 121:     ADNS_init();
 [e ( _ADNS_init ..  ]
-"139
-[; ;main.c: 139:     ADNS_dispRegisters();
+"122
+[; ;main.c: 122:     ADNS_dispRegisters();
 [e ( _ADNS_dispRegisters ..  ]
-"141
-[; ;main.c: 141:     while (1) {
-[e :U 1759 ]
+"124
+[; ;main.c: 124:     while (1) {
+[e :U 1754 ]
 {
-"142
-[; ;main.c: 142:         if (g_AdnsMotion) {
-[e $ ! != -> _g_AdnsMotion `i -> 0 `i 1761  ]
+"125
+[; ;main.c: 125:         if (g_AdnsMotion) {
+[e $ ! != -> _g_AdnsMotion `i -> 0 `i 1756  ]
 {
-"143
-[; ;main.c: 143:             g_AdnsMotion = 0;
+"126
+[; ;main.c: 126:             g_AdnsMotion = 0;
 [e = _g_AdnsMotion -> -> 0 `i `uc ]
-"144
-[; ;main.c: 144:             static int16_t i16DeltaX = 0;
-[v F13314 `s ~T0 @X0 1 s i16DeltaX ]
-[i F13314
+"127
+[; ;main.c: 127:             static int16_t i16DeltaX = 0;
+[v F13299 `s ~T0 @X0 1 s i16DeltaX ]
+[i F13299
 -> -> 0 `i `s
 ]
-"145
-[; ;main.c: 145:             static int16_t i16DeltaY = 0;
-[v F13315 `s ~T0 @X0 1 s i16DeltaY ]
-[i F13315
+"128
+[; ;main.c: 128:             static int16_t i16DeltaY = 0;
+[v F13300 `s ~T0 @X0 1 s i16DeltaY ]
+[i F13300
 -> -> 0 `i `s
 ]
-"147
-[; ;main.c: 147:             if (g_bAdnsEnabled) {
-[e $ ! != -> _g_bAdnsEnabled `i -> 0 `i 1762  ]
+"130
+[; ;main.c: 130:             if (g_bAdnsEnabled) {
+[e $ ! != -> _g_bAdnsEnabled `i -> 0 `i 1757  ]
 {
-"149
-[; ;main.c: 149:                 motion_t motion;
+"132
+[; ;main.c: 132:                 motion_t motion;
 [v _motion `S1740 ~T0 @X0 1 a ]
-"150
-[; ;main.c: 150:                 *((uint8_t *)&motion) = ADNS_read_reg(0x02);
+"133
+[; ;main.c: 133:                 *((uint8_t *)&motion) = ADNS_read_reg(0x02);
 [e = *U -> &U _motion `*uc ( _ADNS_read_reg (1 -> -> 2 `i `uc ]
-"153
-[; ;main.c: 153:                 if (motion.LP_VALID && !motion.FAULT) {
-[e $ ! && != -> . _motion 3 `i -> 0 `i ! != -> . _motion 4 `i -> 0 `i 1763  ]
+"136
+[; ;main.c: 136:                 if (motion.LP_VALID && !motion.FAULT) {
+[e $ ! && != -> . _motion 3 `i -> 0 `i ! != -> . _motion 4 `i -> 0 `i 1758  ]
 {
-"154
-[; ;main.c: 154:                     if (motion.MOT) {
-[e $ ! != -> . _motion 5 `i -> 0 `i 1764  ]
+"137
+[; ;main.c: 137:                     if (motion.MOT) {
+[e $ ! != -> . _motion 5 `i -> 0 `i 1759  ]
 {
-"156
-[; ;main.c: 156:                         i16DeltaX = (uint16_t)ADNS_read_reg(0x03);
-[e = F13314 -> -> ( _ADNS_read_reg (1 -> -> 3 `i `uc `us `s ]
-"157
-[; ;main.c: 157:                         i16DeltaX |= ((uint16_t)ADNS_read_reg(0x04) << 8);
-[e =| F13314 -> << -> -> ( _ADNS_read_reg (1 -> -> 4 `i `uc `us `ui -> 8 `i `s ]
-"160
-[; ;main.c: 160:                         i16DeltaY = (uint16_t)ADNS_read_reg(0x05);
-[e = F13315 -> -> ( _ADNS_read_reg (1 -> -> 5 `i `uc `us `s ]
-"161
-[; ;main.c: 161:                         i16DeltaY |= ((uint16_t)ADNS_read_reg(0x06) << 8);
-[e =| F13315 -> << -> -> ( _ADNS_read_reg (1 -> -> 6 `i `uc `us `ui -> 8 `i `s ]
-"163
-[; ;main.c: 163:                         printf("motion=(%d, %d)\n", i16DeltaX, i16DeltaY);
-[e ( _printf , , (. :s 16C -> F13314 `i -> F13315 `i ]
-"164
-[; ;main.c: 164:                     }
+"139
+[; ;main.c: 139:                         i16DeltaX = (uint16_t)ADNS_read_reg(0x03);
+[e = F13299 -> -> ( _ADNS_read_reg (1 -> -> 3 `i `uc `us `s ]
+"140
+[; ;main.c: 140:                         i16DeltaX |= ((uint16_t)ADNS_read_reg(0x04) << 8);
+[e =| F13299 -> << -> -> ( _ADNS_read_reg (1 -> -> 4 `i `uc `us `ui -> 8 `i `s ]
+"143
+[; ;main.c: 143:                         i16DeltaY = (uint16_t)ADNS_read_reg(0x05);
+[e = F13300 -> -> ( _ADNS_read_reg (1 -> -> 5 `i `uc `us `s ]
+"144
+[; ;main.c: 144:                         i16DeltaY |= ((uint16_t)ADNS_read_reg(0x06) << 8);
+[e =| F13300 -> << -> -> ( _ADNS_read_reg (1 -> -> 6 `i `uc `us `ui -> 8 `i `s ]
+"146
+[; ;main.c: 146:                         printf("motion=(%d, %d)\n", i16DeltaX, i16DeltaY);
+[e ( _printf , , (. :s 16C -> F13299 `i -> F13300 `i ]
+"147
+[; ;main.c: 147:                     }
 }
-[e :U 1764 ]
-"165
-[; ;main.c: 165:                 }
+[e :U 1759 ]
+"148
+[; ;main.c: 148:                 }
 }
-[e $U 1765  ]
-"166
-[; ;main.c: 166:                 else {
-[e :U 1763 ]
-{
-"167
-[; ;main.c: 167:                     printf("Error: motion=0x%X\n", *((uint8_t *)&motion));
-[e ( _printf , (. :s 17C -> *U -> &U _motion `*uc `i ]
-"168
-[; ;main.c: 168:                 }
-}
-[e :U 1765 ]
-"169
-[; ;main.c: 169:             }
-}
-[e :U 1762 ]
-"170
-[; ;main.c: 170:         }
-}
-[e :U 1761 ]
-"171
-[; ;main.c: 171:     }
-}
+[e $U 1760  ]
+"149
+[; ;main.c: 149:                 else {
 [e :U 1758 ]
-[e $U 1759  ]
+{
+"150
+[; ;main.c: 150:                     printf("Error: motion=0x%X\n", *((uint8_t *)&motion));
+[e ( _printf , (. :s 17C -> *U -> &U _motion `*uc `i ]
+"151
+[; ;main.c: 151:                 }
+}
 [e :U 1760 ]
-"172
-[; ;main.c: 172: }
-[e :UE 1757 ]
+"152
+[; ;main.c: 152:             }
+}
+[e :U 1757 ]
+"153
+[; ;main.c: 153:         }
+}
+[e :U 1756 ]
+"154
+[; ;main.c: 154:     }
+}
+[e :U 1753 ]
+[e $U 1754  ]
+[e :U 1755 ]
+"155
+[; ;main.c: 155: }
+[e :UE 1752 ]
 }
 [p f _printf 10748032 ]
 [a 9C 77 111 116 105 111 110 0 ]

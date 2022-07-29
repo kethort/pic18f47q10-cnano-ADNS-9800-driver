@@ -3,17 +3,13 @@
 [d edition pro ]
 [d chip 18F47Q10 ]
 [d frameptr 4065 ]
-"44 C:\Users\User\MPLABXProjects\test-adns-9800.X\main.c
-[e E13233 . `uc
-UART0 0
-]
-"98 C:\Users\User\MPLABXProjects\test-adns-9800.X/adns9800.h
+"98 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X/adns9800.h
 [v _ADNS_com_begin ADNS_com_begin `T(v  1 s 1 ADNS_com_begin ]
-[v _ADNS_com_begin@adns9800$F1000 ADNS_com_begin `T(v  1 s 1 ADNS_com_begin ]
+[v _ADNS_com_begin@adns9800$F962 ADNS_com_begin `T(v  1 s 1 ADNS_com_begin ]
 "104
 [v _ADNS_com_end ADNS_com_end `T(v  1 s 1 ADNS_com_end ]
-[v _ADNS_com_end@adns9800$F1002 ADNS_com_end `T(v  1 s 1 ADNS_com_end ]
-"37 C:\Users\User\MPLABXProjects\test-adns-9800.X\adns9800.c
+[v _ADNS_com_end@adns9800$F964 ADNS_com_end `T(v  1 s 1 ADNS_com_end ]
+"37 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\adns9800.c
 [v _ADNS_read_reg ADNS_read_reg `(uc  1 e 1 0 ]
 "52
 [v _ADNS_write_reg ADNS_write_reg `(v  1 e 1 0 ]
@@ -79,15 +75,15 @@ UART0 0
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"55 C:\Users\User\MPLABXProjects\test-adns-9800.X\main.c
+"38 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\main.c
 [v _ADNS_init ADNS_init `T(v  1 s 1 ADNS_init ]
-"112
+"95
 [v _ADNS_uart_print_register ADNS_uart_print_register `(v  1 e 1 0 ]
-"117
+"100
 [v _ADNS_dispRegisters ADNS_dispRegisters `T(v  1 s 1 ADNS_dispRegisters ]
-"129
+"112
 [v _main main `(v  1 e 1 0 ]
-"88 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/eusart2.c
+"88 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
 "132
 [v _EUSART2_is_tx_ready EUSART2_is_tx_ready `(a  1 e 1 0 ]
@@ -123,17 +119,17 @@ UART0 0
 [v _EUSART2_SetTxInterruptHandler EUSART2_SetTxInterruptHandler `(v  1 e 1 0 ]
 "289
 [v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
-"52 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "58
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
-"50 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/mcc.c
+"50 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "59
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "73
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"57 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "146
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -143,15 +139,15 @@ UART0 0
 [v _IOCAF0_SetInterruptHandler IOCAF0_SetInterruptHandler `(v  1 e 1 0 ]
 "180
 [v _IOCAF0_DefaultInterruptHandler IOCAF0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"34 C:\Users\User\MPLABXProjects\test-adns-9800.X\spi.c
+"34 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\spi.c
 [v _SPI_bitBangData SPI_bitBangData `T(uc  1 s 1 SPI_bitBangData ]
 "57
 [v _SPI_transfer SPI_transfer `(uc  1 e 1 0 ]
 "66
 [v _SPI_init SPI_init `(v  1 e 1 0 ]
-"5 C:\Users\User\MPLABXProjects\test-adns-9800.X/adns9800_srom_A4.h
+"5 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X/adns9800_srom_A4.h
 [v _ADNS_firmware_data ADNS_firmware_data `C[3070]uc  1 s 3070 ADNS_firmware_data ]
-"112 C:\Users\User\MPLABXProjects\test-adns-9800.X/mcc_generated_files/pin_manager.h
+"112 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X/mcc_generated_files/pin_manager.h
 [v _g_AdnsMotion g_AdnsMotion `uc  1 e 1 0 ]
 "9891 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18F-Q_DFP/1.13.211/xc8\pic\include\proc\pic18f47q10.h
 [v _RX2PPS RX2PPS `VEuc  1 e 1 @3720 ]
@@ -470,12 +466,9 @@ UART0 0
 [v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"36 C:\Users\User\MPLABXProjects\test-adns-9800.X\main.c
+"36 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\main.c
 [v _g_bAdnsEnabled g_bAdnsEnabled `a  1 e 1 0 ]
-[s S36 . 30 `*.38(uc 1 Read 3 0 `*.38(v 1 Write 3 3 `*.38(a 1 TransmitReady 3 6 `*.38(a 1 DataReady 3 9 `*.38(v 1 SetTxISR 3 12 `*.38(v 1 RxDefaultISR 3 15 `*.38(v 1 SetRxISR 3 18 `*.38(a 1 TransmitDone 3 21 `*.38(v 1 TxDefaultISR 3 24 `*.38(v 1 Initialize 3 27 ]
-"29 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/drivers/uart.c
-[v _uart uart `C[1]S36  1 e 30 0 ]
-"62 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/eusart2.c
+"62 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/eusart2.c
 [v _eusart2TxHead eusart2TxHead `VEuc  1 e 1 0 ]
 "63
 [v _eusart2TxTail eusart2TxTail `VEuc  1 e 1 0 ]
@@ -511,27 +504,27 @@ UART0 0
 [v _EUSART2_OverrunErrorHandler EUSART2_OverrunErrorHandler `*.38(v  1 e 3 0 ]
 "82
 [v _EUSART2_ErrorHandler EUSART2_ErrorHandler `*.38(v  1 e 3 0 ]
-"54 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/pin_manager.c
+"54 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/pin_manager.c
 [v _IOCAF0_InterruptHandler IOCAF0_InterruptHandler `*.38(v  1 e 3 0 ]
-"129 C:\Users\User\MPLABXProjects\test-adns-9800.X\main.c
+"112 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-[s S991 . 1 `uc 1 FRAME_PIX_FIRST 1 0 :1:0 
+[s S953 . 1 `uc 1 FRAME_PIX_FIRST 1 0 :1:0 
 `uc 1 OP_MODE 1 0 :2:1 
 `uc 1 . 1 0 :2:3 
 `uc 1 LP_VALID 1 0 :1:5 
 `uc 1 FAULT 1 0 :1:6 
 `uc 1 MOT 1 0 :1:7 
 ]
-"149
-[v main@motion motion `S991  1 a 1 85 ]
-"144
+"132
+[v main@motion motion `S953  1 a 1 85 ]
+"127
 [v main@i16DeltaX i16DeltaX `s  1 s 2 i16DeltaX ]
-"145
+"128
 [v main@i16DeltaY i16DeltaY `s  1 s 2 i16DeltaY ]
-"172
+"155
 } 0
-"50 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/mcc.c
+"50 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "57
@@ -541,7 +534,7 @@ UART0 0
 {
 "87
 } 0
-"57 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/pin_manager.c
+"57 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "144
@@ -552,17 +545,17 @@ UART0 0
 [v IOCAF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 4 ]
 "175
 } 0
-"59 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/mcc.c
+"59 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "71
 } 0
-"52 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 } 0
-"88 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/eusart2.c
+"88 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
 {
 "130
@@ -597,25 +590,25 @@ UART0 0
 [v EUSART2_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 4 ]
 "283
 } 0
-"66 C:\Users\User\MPLABXProjects\test-adns-9800.X\spi.c
+"66 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\spi.c
 [v _SPI_init SPI_init `(v  1 e 1 0 ]
 {
 "73
 } 0
-"55 C:\Users\User\MPLABXProjects\test-adns-9800.X\main.c
+"38 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\main.c
 [v _ADNS_init ADNS_init `T(v  1 s 1 ADNS_init ]
 {
-"93
+"76
 [v ADNS_init@u8LaserDriveMode u8LaserDriveMode `uc  1 a 1 33 ]
-"85
+"68
 [v ADNS_init@u8CrcHigh u8CrcHigh `uc  1 a 1 35 ]
-"84
+"67
 [v ADNS_init@u8CrcLow u8CrcLow `uc  1 a 1 34 ]
-"75
+"58
 [v ADNS_init@u8ProductId u8ProductId `uc  1 a 1 36 ]
-"110
+"93
 } 0
-"64 C:\Users\User\MPLABXProjects\test-adns-9800.X\adns9800.c
+"64 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\adns9800.c
 [v _ADNS_upload_firmware ADNS_upload_firmware `(v  1 e 1 0 ]
 {
 "77
@@ -632,32 +625,32 @@ UART0 0
 [v ADNS_write_reg@u8RegAddrP u8RegAddrP `uc  1 a 1 11 ]
 "61
 } 0
-"104 C:\Users\User\MPLABXProjects\test-adns-9800.X/adns9800.h
-[v _ADNS_com_end@adns9800$F1002 ADNS_com_end `T(v  1 s 1 ADNS_com_end ]
+"104 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X/adns9800.h
+[v _ADNS_com_end@adns9800$F964 ADNS_com_end `T(v  1 s 1 ADNS_com_end ]
 {
 "107
 } 0
 "98
-[v _ADNS_com_begin@adns9800$F1000 ADNS_com_begin `T(v  1 s 1 ADNS_com_begin ]
+[v _ADNS_com_begin@adns9800$F962 ADNS_com_begin `T(v  1 s 1 ADNS_com_begin ]
 {
 "101
 } 0
-"117 C:\Users\User\MPLABXProjects\test-adns-9800.X\main.c
+"100 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\main.c
 [v _ADNS_dispRegisters ADNS_dispRegisters `T(v  1 s 1 ADNS_dispRegisters ]
 {
-"127
+"110
 } 0
-"112
+"95
 [v _ADNS_uart_print_register ADNS_uart_print_register `(v  1 e 1 0 ]
 {
 [v ADNS_uart_print_register@u8RegIdP u8RegIdP `uc  1 a 1 wreg ]
-"113
+"96
 [v ADNS_uart_print_register@u8RegValue u8RegValue `uc  1 a 1 34 ]
-"112
+"95
 [v ADNS_uart_print_register@u8RegIdP u8RegIdP `uc  1 a 1 wreg ]
 [v ADNS_uart_print_register@szRegNameP szRegNameP `*.32uc  1 p 2 31 ]
 [v ADNS_uart_print_register@u8RegIdP u8RegIdP `uc  1 a 1 33 ]
-"115
+"98
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\printf.c
 [v _printf printf `(i  1 e 2 0 ]
@@ -673,9 +666,9 @@ UART0 0
 {
 "1393
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 21 ]
-[s S1525 _IO_FILE 0 ]
+[s S1481 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.2S1525  1 p 2 79 ]
+[v vfprintf@fp fp `*.2S1481  1 p 2 79 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 81 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 83 ]
 "1404
@@ -690,9 +683,9 @@ UART0 0
 "694
 [v vfpfcnvrt@cp cp `*.34uc  1 a 2 16 ]
 [v vfpfcnvrt@c c `uc  1 a 1 18 ]
-[s S1525 _IO_FILE 0 ]
+[s S1481 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.2S1525  1 p 2 69 ]
+[v vfpfcnvrt@fp fp `*.2S1481  1 p 2 69 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 71 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 73 ]
 "1387
@@ -707,9 +700,9 @@ UART0 0
 [v xtoa@i i `i  1 a 2 64 ]
 [v xtoa@w w `i  1 a 2 54 ]
 [v xtoa@p p `i  1 a 2 52 ]
-[s S1525 _IO_FILE 0 ]
+[s S1481 _IO_FILE 0 ]
 "645
-[v xtoa@fp fp `*.2S1525  1 p 2 33 ]
+[v xtoa@fp fp `*.2S1481  1 p 2 33 ]
 [v xtoa@d d `uo  1 p 8 35 ]
 [v xtoa@x x `uc  1 p 1 43 ]
 "687
@@ -763,9 +756,9 @@ UART0 0
 "571
 [v stoa@w w `i  1 a 2 29 ]
 [v stoa@i i `i  1 a 2 27 ]
-[s S1525 _IO_FILE 0 ]
+[s S1481 _IO_FILE 0 ]
 "568
-[v stoa@fp fp `*.2S1525  1 p 2 15 ]
+[v stoa@fp fp `*.2S1481  1 p 2 15 ]
 [v stoa@s s `*.34uc  1 p 2 17 ]
 "570
 [v stoa@F1150 F1150 `[7]uc  1 s 7 F1150 ]
@@ -781,9 +774,9 @@ UART0 0
 [v dtoa@s s `i  1 a 2 57 ]
 [v dtoa@w w `i  1 a 2 55 ]
 [v dtoa@p p `i  1 a 2 53 ]
-[s S1525 _IO_FILE 0 ]
+[s S1481 _IO_FILE 0 ]
 "287
-[v dtoa@fp fp `*.2S1525  1 p 2 33 ]
+[v dtoa@fp fp `*.2S1481  1 p 2 33 ]
 [v dtoa@d d `o  1 p 8 35 ]
 "328
 } 0
@@ -793,9 +786,9 @@ UART0 0
 "74
 [v pad@w w `i  1 a 2 31 ]
 [v pad@i i `i  1 a 2 29 ]
-[s S1525 _IO_FILE 0 ]
+[s S1481 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.2S1525  1 p 2 22 ]
+[v pad@fp fp `*.2S1481  1 p 2 22 ]
 [v pad@buf buf `*.39uc  1 p 2 24 ]
 [v pad@p p `i  1 p 2 26 ]
 "95
@@ -818,21 +811,21 @@ UART0 0
 [v fputs@c c `uc  1 a 1 19 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 15 ]
-[u S1503 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1506 _IO_FILE 11 `S1503 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.2S1506  1 p 2 17 ]
+[u S1459 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1462 _IO_FILE 11 `S1459 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.2S1462  1 p 2 17 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 6 ]
-[u S1503 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S1506 _IO_FILE 11 `S1503 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.2S1506  1 p 2 8 ]
+[u S1459 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S1462 _IO_FILE 11 `S1459 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.2S1462  1 p 2 8 ]
 "24
 } 0
-"201 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/eusart2.c
+"201 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/eusart2.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@txData txData `uc  1 a 1 wreg ]
@@ -879,7 +872,7 @@ UART0 0
 [v ___aodiv@divisor divisor `o  1 p 8 12 ]
 "43
 } 0
-"37 C:\Users\User\MPLABXProjects\test-adns-9800.X\adns9800.c
+"37 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\adns9800.c
 [v _ADNS_read_reg ADNS_read_reg `(uc  1 e 1 0 ]
 {
 [v ADNS_read_reg@u8RegAddrP u8RegAddrP `uc  1 a 1 wreg ]
@@ -891,7 +884,7 @@ UART0 0
 [v ADNS_read_reg@u8RegAddrP u8RegAddrP `uc  1 a 1 10 ]
 "49
 } 0
-"57 C:\Users\User\MPLABXProjects\test-adns-9800.X\spi.c
+"57 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\spi.c
 [v _SPI_transfer SPI_transfer `(uc  1 e 1 0 ]
 {
 [v SPI_transfer@u8DataP u8DataP `uc  1 a 1 wreg ]
@@ -917,7 +910,7 @@ UART0 0
 [v SPI_bitBangData@u8DataToSendP u8DataToSendP `uc  1 a 1 5 ]
 "53
 } 0
-"104 C:\Users\User\MPLABXProjects\test-adns-9800.X/adns9800.h
+"104 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X/adns9800.h
 [v _ADNS_com_end ADNS_com_end `T(v  1 s 1 ADNS_com_end ]
 {
 "107
@@ -927,12 +920,12 @@ UART0 0
 {
 "101
 } 0
-"58 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/interrupt_manager.c
+"58 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
 "84
 } 0
-"146 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/pin_manager.c
+"146 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
 "153
@@ -947,7 +940,7 @@ UART0 0
 {
 "184
 } 0
-"206 C:\Users\User\MPLABXProjects\test-adns-9800.X\mcc_generated_files/eusart2.c
+"206 C:\Users\User\Documents\repos\pic18f47q10-cnano-ADNS-9800-driver\pic18f47q10-cnano-ADNS-9800-driver\test-adns-9800.X\mcc_generated_files/eusart2.c
 [v _EUSART2_Transmit_ISR EUSART2_Transmit_ISR `(v  1 e 1 0 ]
 {
 "223
