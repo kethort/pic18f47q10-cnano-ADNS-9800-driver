@@ -11,13 +11,13 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production\test-adns-9800.X.production.hex)
   8h - DDh		(dist/default/production\test-adns-9800.X.production.hex)
-  F2D4h - 11AECh		(dist/default/production\test-adns-9800.X.production.hex)
+  F2F2h - 11AECh		(dist/default/production\test-adns-9800.X.production.hex)
   11AEEh - 11B09h		(dist/default/production\test-adns-9800.X.production.hex)
   200000h - 2000FFh		(dist/default/production\test-adns-9800.X.production.hex)
   300000h - 30000Bh		(dist/default/production\test-adns-9800.X.production.hex)
  Unused ranges:
   4h - 7h
-  DEh - F2D3h
+  DEh - F2F1h
   11AEDh - 11AEDh
   11B0Ah - 1FFFFFh
   200100h - 2FFFFFh
@@ -44,9 +44,7 @@
 000000C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000000D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 ----------------------------------------------------------
-0000F2D0 | -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-0000F2E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-0000F2F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+0000F2F0 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000F300 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000F310 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 0000F320 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
