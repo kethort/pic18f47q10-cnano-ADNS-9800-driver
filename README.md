@@ -7,7 +7,7 @@ Prints the X/Y delta location of the sensor to UART
   <img src="/img/STDIO.PNG" height="500" width="800"/>
 </p>
 
-This driver is a stripped-down sensor-only version of the repo located here but ported to PIC18:
+This driver is a stripped-down sensor-only version of the repo located here:
 https://github.com/gps79/Amiga-Laser-Mouse-ADNS-9800
 
 All licenses and credits are included throughout the source
