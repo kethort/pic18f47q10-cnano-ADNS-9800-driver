@@ -10,4 +10,6 @@ Prints the X/Y delta location of the sensor to UART
 This driver is a stripped-down sensor-only version of the repo located here:
 https://github.com/gps79/Amiga-Laser-Mouse-ADNS-9800
 
+Instead of polling for device movement, the interrupt pin is used to monitor sensor movement.
+
 All licenses and credits are included throughout the source
